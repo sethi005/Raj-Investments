@@ -1,0 +1,24 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment / Local files
+.env
+.env.local
+
+# Dependencies (Just in case you use them later)
+node_modules/
+
+# Build output (If you ever use a bundler later)
+dist/
+build/
