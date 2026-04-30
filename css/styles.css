@@ -1,0 +1,273 @@
+* {
+    transition: all 0.3s ease;
+}
+
+
+/* 1. Reset default Bootstrap toggler styling */
+.navbar-toggler {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0;
+}
+
+/* 2. Base styling for the 3 lines */
+.navbar-toggler span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    background-color: #970449;
+    /* Change this to match your brand color */
+    border-radius: 2px;
+    position: absolute;
+    left: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 3. Positioning the 3 lines initially */
+.navbar-toggler span:nth-child(1) {
+    top: 9px;
+}
+
+.navbar-toggler span:nth-child(2) {
+    top: 16px;
+}
+
+.navbar-toggler span:nth-child(3) {
+    top: 23px;
+}
+
+/* =========================================
+   4. THE ANIMATION (When menu is open)
+   ========================================= */
+
+/* Move top line down to the middle and rotate 45 degrees */
+.navbar-toggler[aria-expanded="true"] span:nth-child(1) {
+    top: 16px;
+    transform: rotate(45deg);
+}
+
+/* Make middle line disappear */
+.navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+    /* Adds a nice shrinking effect */
+}
+
+/* Move bottom line up to the middle and rotate -45 degrees */
+.navbar-toggler[aria-expanded="true"] span:nth-child(3) {
+    top: 16px;
+    transform: rotate(-45deg);
+}
+
+/* Default Link State */
+.navbar-nav .nav-link {
+    color: #555;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover State */
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;
+}
+
+/* Active State Styling */
+.navbar-nav .nav-link.active {
+    color: #0d6efd;
+    /* Changes text color */
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+/* **************** */
+/* END */
+/* ********************* */
+.hero {
+    background: linear-gradient(135deg, #1e88e5, #f9aae0);
+    height: 90vh;
+}
+
+.hero .btn {
+    background-color: #970449;
+    color: aliceblue;
+}
+
+/* BUTTON HOVER */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #970449;
+}
+
+.service-card {
+    background-color: aliceblue;
+    border-radius: 12px;
+}
+
+.service-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+#calcTabs {
+    background: #f1f3f5;
+    border-radius: 30px;
+    padding: 4px;
+}
+
+#calcTabs>.nav-item>.nav-link {
+    border: none;
+    background: transparent;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+}
+
+#calcTabs>.nav-item>.nav-link.active {
+    color: #970449;
+    font-weight: 500;
+}
+
+/* Toggle function */
+.toggle-group {
+    display: inline-flex;
+    background: #f1f3f5;
+    border-radius: 30px;
+    padding: 4px;
+}
+
+.toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+}
+
+/* ACTIVE STATE */
+.toggle-btn.active {
+    background: #970449;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(151, 4, 73, 1);
+}
+
+
+#sipInputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* space between slider and number box */
+}
+
+#sipAmount {
+    flex: 1;
+    /* slider stretches */
+}
+
+#sipAmountInput {
+    width: 100px;
+    /* fixed width for number input */
+}
+
+#sipAmount {
+    accent-color: #0d6efd;
+    /* Bootstrap primary blue */
+    height: 6px;
+    border-radius: 3px;
+}
+
+#sipAmount::-webkit-slider-thumb {
+    background: #0d6efd;
+    border: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#sipAmount::-moz-range-thumb {
+    background: #0d6efd;
+    border: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#lumpInputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* space between slider and number box */
+}
+
+.calc-card {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+}
+
+.calc-card label {
+    margin-bottom: 0.5rem;
+}
+
+.calc-card input[type="range"],
+.calc-card input[type="number"] {
+    flex: 1;
+}
+
+#swpInvestmentInput {
+    width: 120px;
+    /* fixed width for number input */
+}
+
+#swpInvestment {
+    accent-color: #0d6efd;
+    /* Bootstrap primary blue */
+    height: 6px;
+    border-radius: 3px;
+}
+
+#swpInvestment::-webkit-slider-thumb {
+    background: #0d6efd;
+    border: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#swpInvestment::-moz-range-thumb {
+    background: #0d6efd;
+    border: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.why-us {
+    background-color: aliceblue;
+}
